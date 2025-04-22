@@ -1,0 +1,365 @@
+:root {
+    --primary: #6c63ff;
+    --secondary: #f50057;
+    --dark: #2c2c2c;
+    --light: #f5f5f5;
+    --success: #4caf50;
+    --step1: #FF6B6B;
+    --step2: #48DBFB;
+    --step3: #1DD1A1;
+    --step4: #FECA57;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.cta-button {
+    background-color: var(--primary);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #5651db;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(108, 99, 255, 0.3);
+}
+
+#hero {
+    padding: 100px 0;
+    background-color: #fdf5f5;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero-text h1 {
+    font-size: 64px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: var(--dark);
+    line-height: 1.2;
+    font-family: Georgia, serif;
+}
+
+.hero-text p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #666;
+    font-family: Georgia, serif;
+}
+
+.hero-img {
+    width: 35%;
+    position: relative;
+}
+
+.hero-img img {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(138, 138, 138, 0.1);
+}
+
+.highlight {
+    color: var(--primary);
+}
+
+.whatsapp-button {
+    background-color: #111;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.whatsapp-button:hover {
+    background-color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.tech-jobs-note {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #666;
+}
+
+#how-it-works {
+    padding: 100px 0;
+    background-color: white;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 20px;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.section-title p {
+    font-size: 18px;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: "Georgia", Georgia, serif;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    
+}
+
+.step {
+    width: 23%;
+    border-radius: 15px;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    
+}
+
+.step:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    z-index: -1;
+    transition: transform 0.5s;
+    transform: translateY(100%);
+    
+}
+
+.step:hover:before {
+    transform: translateY(0);
+}
+
+.step:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    color: white;
+    
+}
+
+.step:hover .step-number,
+.step:hover h3,
+.step:hover p {
+    color: white;
+    font-family: Georgia, serif;
+    
+}
+
+.step:hover .step-icon {
+    transform: scale(1.2);
+}
+
+.step-1 {
+    background-color: white;
+    border-bottom: 5px solid var(--step1);
+    
+    
+}
+
+.step-1:before {
+    background-color: var(--step1);
+    
+}
+
+.step-2 {
+    background-color: white;
+    border-bottom: 5px solid var(--step2);
+}
+
+.step-2:before {
+    background-color: var(--step2);
+}
+
+.step-3 {
+    background-color: white;
+    border-bottom: 5px solid var(--step3);
+}
+
+.step-3:before {
+    background-color: var(--step3);
+}
+
+.step-4 {
+    background-color: white;
+    border-bottom: 5px solid var(--step4);
+}
+
+.step-4:before {
+    background-color: var(--step4);
+}
+
+.step-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.step-1 .step-icon {
+    color: var(--step1);
+}
+
+.step-2 .step-icon {
+    color: var(--step2);
+}
+
+.step-3 .step-icon {
+    color: var(--step3);
+}
+
+.step-4 .step-icon {
+    color: var(--step4);
+}
+
+.step-number {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #999;
+    transition: color 0.3s;
+}
+
+.step h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--dark);
+    transition: color 0.3s;
+}
+
+.step p {
+    font-size: 16px;
+    color: #666;
+    transition: color 0.3s;
+}
+
+
+
+footer {
+    background-color: var(--dark);
+    color: white;
+    padding: 60px 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #ccc;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-text {
+        margin-bottom: 40px;
+        max-width: 100%;
+    }
+    
+    .hero-img {
+        width: 80%;
+    }
+    
+    .step {
+        width: 48%;
+        margin-bottom: 30px;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 36px;
+    }
+    
+    .step {
+        width: 100%;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+    }
+    
+    .footer-links {
+        margin-bottom: 30px;
+    }
+}
